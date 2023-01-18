@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(238, 238, 238);
+    font-size: 44px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(51, 51, 51);
+
+    padding: 30px 80px;
+    
+}
