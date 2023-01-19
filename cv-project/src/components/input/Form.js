@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import Add from './buttons/Add'
 import Delete from './buttons/Delete'
 import uniqid from 'uniqid'; 
 import Section from './Section'; 
 import '../../styles/Form.css'
+import '../../styles/Button.css';
 
 class Form extends Component {
     constructor() {
@@ -20,6 +20,13 @@ class Form extends Component {
             "experienceID":[uniqid()],
             "skillsID":[uniqid()], 
         };
+        this.handleAdd = this.handleAdd.bind(this)
+    }
+
+    handleAdd(e) {
+        if (e.target.getAttribute('sectionType') == "education") {
+            alert(`${e.target.getAttribute('sectionType')} button clicked`); 
+        }
     }
 
     render() {
@@ -28,23 +35,31 @@ class Form extends Component {
         return (
             <div className='form'>
                 <div className='user-info'>
-                    <div className='section'>
-                        <Section show={true} sectionType="info" id={infoID}/>
+                    <div className="section">
+                        <div id="all-info">
+                            <Section show={true} sectionType="info" id={infoID}/>
+                        </div>
                     </div>
-                    <div className='section'>
-                        <Section show={true} sectionType="education" id={educationID[educationID.length-1]}/>
+                    <div className="section">
+                        <div id="all-education">
+                            <Section show={true} sectionType="education" id={educationID[educationID.length-1]}/>
+                        </div>
                         <Delete sectionType="education"/>
-                        <Add sectionType="education"/>
+                        <button sectionType="education" className="add" onClick={this.handleAdd}>Add</button>
                     </div>
-                    <div className='section'>
-                        <Section show={true} sectionType="experience" id={experienceID[experienceID.length-1]}/>
+                    <div className="section">
+                        <div id="all-experience">
+                            <Section show={true} sectionType="experience" id={experienceID[experienceID.length-1]}/>
+                        </div>
                         <Delete sectionType="experience"/>
-                        <Add sectionType="experience"/>
+                        <button sectionType="experience" className="add" onClick={this.handleAdd}>Add</button>
                     </div>
-                    <div className='section'>
-                        <Section show={true} sectionType="skills" id={skillsID[skillsID.length-1]}/>
+                    <div className="section">
+                        <div id="all-skills">
+                            <Section show={true} sectionType="skills" id={skillsID[skillsID.length-1]}/>
+                        </div>
                         <Delete sectionType="skills"/>
-                        <Add sectionType="skills"/>
+                        <button sectionType="skills" className="add" onClick={this.handleAdd}>Add</button>
                     </div>
                     <div className='submit'></div>
                 </div>
