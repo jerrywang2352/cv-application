@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import Input from './Input'
-import Add from './buttons/Add'
-import Delete from './buttons/Delete'
 
 class Section extends Component {
     constructor(props) {
@@ -15,8 +13,8 @@ class Section extends Component {
             if (this.props.sectionType == 'info') {
                 return (
                     <div className='section' id={id}>
-                        <div className='user-input'>
-                            <div className='section-header'>Personal Information</div>
+                        <div className='section-header'>Personal Information</div>
+                        <div className='user-input' id={id}>
                             <Input placeholder='First Name' isTextArea={false}/>
                             <Input placeholder='Last Name' isTextArea={false}/>
                             <Input placeholder='Address Name' isTextArea={false}/>
@@ -37,8 +35,6 @@ class Section extends Component {
                             <Input placeholder='From' isTextArea={false}/>
                             <Input placeholder='To' isTextArea={false}/>
                             <Input placeholder='Coursework' isTextArea={true}/>
-                            <Delete sectionType="education"/>
-                            <Add sectionType="education"/>
                         </div>
                     </div>
                 );
@@ -54,8 +50,6 @@ class Section extends Component {
                             <Input placeholder='From' isTextArea={false}/>
                             <Input placeholder='To' isTextArea={false}/>
                             <Input placeholder='Description' isTextArea={true}/>
-                            <Delete sectionType="experience"/>
-                            <Add sectionType="experience"/>
                         </div>
                     </div>
                 );
@@ -68,8 +62,6 @@ class Section extends Component {
                             <Input placeholder='Frameworks' isTextArea={false}/>
                             <Input placeholder='Libraries' isTextArea={false}/>
                             <Input placeholder='Developer Tools' isTextArea={false}/>
-                            <Delete sectionType="skills"/>
-                            <Add sectionType="skills"/>
                         </div>
                     </div>
                 );

@@ -28,14 +28,28 @@ class Form extends Component {
         return (
             <div className='form'>
                 <div className='user-info'>
-                    <Section show={true} sectionType="info" id={infoID}/>
-                    <Section show={true} sectionType="education" id={educationID[educationID.length-1]}/>
-                    <Section show={true} sectionType="experience" id={experienceID[experienceID.length-1]}/>
-                    <Section show={true} sectionType="skills" id={skillsID[skillsID.length-1]}/>
+                    <div className='section'>
+                        <Section show={true} sectionType="info" id={infoID}/>
+                    </div>
+                    <div className='section'>
+                        <Section show={true} sectionType="education" id={educationID[educationID.length-1]}/>
+                        <Delete sectionType="education"/>
+                        <Add sectionType="education"/>
+                    </div>
+                    <div className='section'>
+                        <Section show={true} sectionType="experience" id={experienceID[experienceID.length-1]}/>
+                        <Delete sectionType="experience"/>
+                        <Add sectionType="experience"/>
+                    </div>
+                    <div className='section'>
+                        <Section show={true} sectionType="skills" id={skillsID[skillsID.length-1]}/>
+                        <Delete sectionType="skills"/>
+                        <Add sectionType="skills"/>
+                    </div>
                     <div className='submit'></div>
                 </div>
                 <div className='output'>
-                    
+
                 </div>
             </div>
         );
