@@ -1,0 +1,43 @@
+.form {
+    padding: 40px;
+    background-color:rgb(204,204,204); ;
+}
+
+.user-info {
+    width: 753.688px; 
+    padding: 20px;
+    box-shadow:0 0 20px gray;
+}
+
+.section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section-header{
+    color: #333333;
+    font-size: 18.72px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 5px; 
+}
+
+
+input,
+textarea {
+    border-radius: 5px;
+    padding:5px; 
+    width: 80%; 
+    border-color: rgb(204,204,204);
+    margin:5px;
+}
+
+textarea {
+    resize: none; 
+    height: 80px;   
+}
+
+::placeholder {
+    color: gray;
+    font-size:16px;
+}
