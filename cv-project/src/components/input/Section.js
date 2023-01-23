@@ -13,7 +13,6 @@ class Section extends Component {
             if (this.props.sectionType == 'info') {
                 return (
                     <div className='section' id={id}>
-                        <div className='section-header'>Personal Information</div>
                         <div className='user-input' id={id}>
                             <Input placeholder='First Name' isTextArea={false}/>
                             <Input placeholder='Last Name' isTextArea={false}/>
@@ -26,7 +25,6 @@ class Section extends Component {
             } else if (this.props.sectionType == "education") {
                 return (
                     <div className='section' id={id}>
-                        <div className='section-header'>Education</div>
                         <div className='user-input'>
                             <Input placeholder='University Name' isTextArea={false}/>
                             <Input placeholder='City' isTextArea={false}/>
@@ -41,7 +39,6 @@ class Section extends Component {
             } else if (this.props.sectionType == "experience") {
                 return (
                     <div className='section' id={id}>
-                        <div className='section-header'>Experience</div>
                         <div className='user-input'>
                             <Input placeholder='Position' isTextArea={false}/>
                             <Input placeholder='Company' isTextArea={false}/>
@@ -56,7 +53,6 @@ class Section extends Component {
             } else if (this.props.sectionType== "skills") {
                 return (
                     <div className='section' id={id}>
-                        <div className='section-header'>Skills</div>
                         <div className='user-input'>
                             <Input placeholder='Languages' isTextArea={false}/>
                             <Input placeholder='Frameworks' isTextArea={false}/>
